@@ -1,0 +1,79 @@
+#SETTING UP
+
+from bs4 import BeautifulSoup as bs
+
+ html = "..." # ... = html code
+ 
+ soup = bs(html, 'html5lib') #to parse as a nested data structure
+ 
+ # TAG OBJECT
+ 
+ tag_object = soup.title #looks for the <title> and returns what's found
+ tag_object:
+ <title>Page Title</title>
+ 
+ Tag_object = soup.h3 #looks for the <h3> and returns what's found
+ tag_object:
+ <h3><b id="boldest">Lebron James</b/></h3>
+ 
+ tag_child=tag_object.b #looks for the <b> and returns what's found. <b> here is a child of <h3> since it's an HTML tree structure
+ tag_child:
+ <b id="boldest">Lebron James>/b>
+ 
+ parent_tag=tag_child.parent # same concept but goes "up" the tree, to the parent of whatever was defined in the tag_child variable
+ parent_tag:
+ <h3><b id="boldest">Lebron James</b></h3>
+ 
+ .next-sibling
+ 
+ #NAVIGABLE STRING
+ 
+ tag_child.attrs: #access the attribute name and value as a key value pair as a dictionary
+{'id': 'boldest'}
+
+tag_child.string: #return the conent as a navigable string
+'Lebron James'
+
+#find_all works like a filter
+table=row=table.find_all(name='tr')
+table_row:
+
+first_row=table_row[0]
+first_row:
+<tr><td>Pizza Place</td><td>Orders</td> <td>Slices</td></tr>
+
+first_row.td:
+<td>Pizza Place</td> will extract the first cell
+
+#Elements
+
+Pizza Place    Orders    Slices
+Domino's Pizza   10       100
+Little Caesars   12       144
+Papa John's      15       166
+
+for i,row in enumerate(table_rows):
+  print('row', i)
+  cells=row.find_all('td')
+
+for j/cell in enumerate(cells):
+  print('column', k, 'cell', cell)
+  
+  
+ #OVERVIEW
+ 
+ import requests
+ from bs import BeautifulSoup as bs
+ 
+ page=requests.get('urlblabla).text #using the requests library to download the urlblabla using the .get method
+ soup = bs(page, 'html.parser' #create a bs object
+ 
+ artists=soup.find_all('a) @finds all instances of <a> tag
+ 
+ for artist in artists: #clears data of all tags
+  names=artist.contents[0]
+  fullLink=artist.get('href')
+  print(names)
+  print(fullLink)
+ 
+ 
