@@ -7,4 +7,4 @@ amd_info['sector']
 
 amd_share_info = amd.history(period="max")
 amd_share_info['Volume'].iloc[0]
-
+219600
