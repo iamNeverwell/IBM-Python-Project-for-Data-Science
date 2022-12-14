@@ -1,0 +1,10 @@
+amd = yf.Ticker("AMD")
+
+amd_info=amd.info
+amd_info['country']
+
+amd_info['sector']
+
+amd_share_info = amd.history(period="max")
+amd_share_info['Volume'].iloc[0]
+
