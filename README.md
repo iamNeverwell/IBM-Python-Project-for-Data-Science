@@ -15,3 +15,6 @@ For this project you will use Skills Network Labs and Watson Studio. Skills Netw
 
 There are two hands-on labs on Extracting Stock Data and one assignment to complete. You will be judged by completing two quizzes and one peer review assignment. The quizzes will test you based on the output of the hands-on labs. In the peer review assignment you will share and take screen shots of the outcomes of your assignment.
 
+### My personal note
+
+I had to look up several things, and added comment that led me to the resolution, and that would be nice to know in the future. Please keep in mind that the peer-graded assignment code you have on IBM's lab environment might not necessarily work on an updated Jupyter Notebook, for example. I had to look even more stuff up to be able to have code that ran without errors and still delivered what was asked for in the peer-graded instructions.
